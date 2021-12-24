@@ -1,0 +1,7 @@
+use application "polytope";
+
+use vars '$f', '$p';
+$f = lp2poly('lp.lp');
+$p = new Polytope<Rational>($f);
+
+print_constraints($p->FACETS);
